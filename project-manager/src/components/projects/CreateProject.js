@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { createProject } from '../../store/actions/projectAction';
 
-const CreateProject = () => {
+const CreateProject = (props) => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
@@ -15,7 +17,7 @@ const CreateProject = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(title, content);
+    props.createProject({ title, content });
     setTitle('');
     setContent('');
   };
@@ -49,4 +51,10 @@ const CreateProject = () => {
   );
 };
 
-export default CreateProject;
+const mapDispatchToProps = (dispath) => {
+  return {
+    createProject: (project) => dispath(createProject(project)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(CreateProject);
