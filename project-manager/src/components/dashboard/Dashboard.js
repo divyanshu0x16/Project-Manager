@@ -26,7 +26,7 @@ const Dashboard = ({ projects }) => {
 const mapStateToProps = (state) => {
   return {
     //State has a project object (rootReducer), which has projects object (projectsReducer)
-    projects: state.firestore.ordered.projects || state.project.projects,
+    projects: state.firestore.ordered.projects,
   };
 };
 
