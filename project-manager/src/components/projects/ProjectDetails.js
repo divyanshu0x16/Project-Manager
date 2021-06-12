@@ -5,7 +5,6 @@ import { compose } from 'redux';
 import { Redirect } from 'react-router-dom';
 
 const ProjectDetails = ({ match, project, auth }) => {
-  console.log(auth.uid);
   if (!auth.uid) {
     return <Redirect to="/signin" />;
   }
