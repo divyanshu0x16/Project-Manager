@@ -39,6 +39,7 @@ const CreateProject = (props) => {
           <label htmlFor="content">Project Content</label>
           <textarea
             id="content"
+            value={content}
             className="materialize-textarea"
             onChange={handleChange}
           ></textarea>
