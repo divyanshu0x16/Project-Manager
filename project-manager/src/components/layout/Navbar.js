@@ -13,7 +13,7 @@ const Navbar = (props) => {
         <Link to="/" className="brand-logo">
           Project Manager
         </Link>
-        {links}
+        {auth.isLoaded && links}
       </div>
     </nav>
   );
