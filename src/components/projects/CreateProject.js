@@ -7,7 +7,7 @@ const CreateProject = (props) => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
-  if (!props.auth.uid) return <Redirect to='/signin' />
+  if (!props.auth.uid) return <Redirect to="/signin" />;
   const handleChange = (e) => {
     if (e.target.id === 'title') {
       setTitle(e.target.value);
@@ -22,6 +22,7 @@ const CreateProject = (props) => {
     props.createProject({ title, content });
     setTitle('');
     setContent('');
+    props.history.push('/');
   };
 
   return (
