@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Notifications = () => {
+const Notifications = (props) => {
     return(
         <div className="section">
             <div className="card">
