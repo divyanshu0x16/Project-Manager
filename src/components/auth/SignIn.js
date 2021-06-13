@@ -28,7 +28,7 @@ const SignIn = (props) => {
   }
 
   return (
-    <div className="container">
+    <div className="container z-depth-1">
       <form onSubmit={handleSubmit} className="white">
         <h5 className="grey-text text-darken-3">Sign In</h5>
         <div className="input-field">
@@ -50,7 +50,7 @@ const SignIn = (props) => {
           ></input>
         </div>
         <div className="input-field">
-          <button className="btn pink lighten-1 z-depth-0">Login</button>
+          <button className="btn pink lighten-1">Login</button>
           <div className="red-text center">
             {authError ? <p>{authError}</p> : null}
           </div>

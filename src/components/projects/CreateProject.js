@@ -26,9 +26,9 @@ const CreateProject = (props) => {
   };
 
   return (
-    <div className="container">
+    <div className="container z-depth-1">
       <form onSubmit={handleSubmit} className="white">
-        <h5 className="grey-text text-darken-3">Cerate Project</h5>
+        <h5 className="grey-text text-darken-3">Create Project</h5>
         <div className="input-field">
           <label htmlFor="title">Title</label>
           <input
@@ -48,7 +48,7 @@ const CreateProject = (props) => {
           ></textarea>
         </div>
         <div className="input-field">
-          <button className="btn pink lighten-1 z-depth-0">Create</button>
+          <button className="btn pink lighten-1">Create</button>
         </div>
       </form>
     </div>
